@@ -1,0 +1,29 @@
+.page-footer {
+  width: 100vw;
+  height: 50vh;
+  background-color: whitesmoke;
+}
+
+.footer-menu > ul {
+  height: 20vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-menu > ul > li > a {
+  text-decoration: none;
+  color: #000;
+}
+
+.footer-title {
+  text-align: center;
+  margin-top: 70px;
+  font-size: 20px;
+}
+
+.copyright {
+  font-size: 12px;
+  margin-top: 10px;
+  text-align: center;
+}

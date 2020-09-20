@@ -1,0 +1,64 @@
+.page-header {
+  width: 100vw;
+  height: 40vh;
+}
+
+.header-content {
+  background-color:white;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-left {
+  width: 30vw;
+}
+
+.header-center {
+  width: 40vw;
+}
+
+.header-right {
+  width: 30vw;
+}
+
+.food-linker {
+  text-align: center;
+  font-size: 34px;
+  color: rgb(68, 67, 67);
+}
+
+.sub-title {
+  text-align: center;
+  font-size: 13px;
+}
+
+.header-right > ul {
+  display: flex;
+}
+
+.header-right > ul > li {
+  margin: 0 20px;
+}
+
+.header-right > ul > li > a {
+  text-decoration: none;
+  color: #000;
+}
+
+.menu-bar {
+  background-color: whitesmoke;
+}
+
+.menu-list {
+  height: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu-list > li > a {
+  text-decoration: none;
+  color: #000;
+}
