@@ -16,6 +16,10 @@
   color: #000;
 }
 
+.footer-content {
+  height: 20vh;
+}
+
 .footer-title {
   text-align: center;
   margin-top: 70px;
