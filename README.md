@@ -71,8 +71,8 @@ Things you may want to cover:
 ### tweetsテーブル
 | Column   | Type   | Options     |
 | -------- | ------ | ----------- |
-| item_name | string | null: false |
-| item_text | string | null: false |
+| tweet_name | string | null: false |
+| tweet_text | string | null: false |
 | admin_id | references | null: false, foreign_key: true |
 ### Association
 - belongs_to :admin
@@ -82,7 +82,7 @@ Things you may want to cover:
 ### commentsテーブル
 | Column   | Type   | Options     |
 | -------- | ------ | ----------- |
-| text | string | null: false |
+| comment_text | string | null: false |
 | user_id | references | null: false, foreign_key: true |
 | tweet_id | references | null: false, foreign_key: true |
 ### Association
