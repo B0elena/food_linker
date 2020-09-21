@@ -1,34 +1,64 @@
-<h2>Sign up</h2>
+<%# ヘッダー部分 %>
+<div class="header-content">
+  <div class="header-left">
+  </div>
+  <div class="header-center">
+    <h1>
+      <div class="food-linker">
+        <%= link_to "FOOD LINKER", "/", class: "food-linker-logo" %>
+      </div>
+    </h1>
+    <p class="sub-title">料理人で作り上げるSNS</p>
+  </div>
+  <div class="header-right">
+  </div>
+</div>
+<%# ヘッダー部分 %>
 
-<%= form_with model: @user, url: user_registration_path,local: true do |f| %>
-  <%= render "users/shared/error_messages", resource: resource %>
+<main class="user-registrations-new">
+  <h1>ユーザー登録</h1>
 
-  <div class="field">
-      <%= f.label :nickname %><br />
+  <%= form_with model: @user, url: user_registration_path,local: true do |f| %>
+    <%#= render "users/shared/error_messages", resource: resource %>
+
+    <div class="field">
+      <%= f.label :ニックネーム %>
+      <em>(必須)</em><br />
       <%= f.text_field :nickname, autofocus: true %>
-  </div>
+    </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+    <div class="field">
+      <%= f.label :メールアドレス %>
+      <em>(必須)</em><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
+    <div class="field">
+      <%= f.label :パスワード %>
+      <% if @minimum_password_length %>
+      <em>(必須　<%= @minimum_password_length %> 文字以上)</em>
+      <% end %><br />
+      <%= f.password_field :password, autocomplete: "new-password" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
+    <div class="field">
+      <%= f.label :パスワードの確認 %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    </div>
 
-  <div class="actions">
-    <%= f.submit "登録する" %>
-  </div>
-<% end %>
+    <div class="actions">
+      <%= f.submit "登録する" %>
+    </div>
+  <% end %>
+</main>
 
-<%= render "users/shared/links" %>
+<%# フッター部分 %>
+<div class="footer-content">
+  <div class="footer-title">
+    FOOD LINKER
+  </div>
+  <div class="copyright">
+    Copyright(C) 2020  FOOD LINKER  All Rights Researved.
+  </div>
+</div>
+<%# フッター部分 %>

@@ -29,6 +29,11 @@
   color: rgb(68, 67, 67);
 }
 
+.food-linker-logo {
+  text-decoration: none;
+  color: rgb(68, 67, 67);
+}
+
 .sub-title {
   text-align: center;
   font-size: 13px;
