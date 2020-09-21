@@ -1,8 +1,13 @@
 <footer class="page-footer">
   <nav class="footer-menu">
     <ul>
-      <li><a href="">料理人の新規登録</a></li>
-      <li><a href="">料理人のログイン</a></li>
+    <% if admin_signed_in? %>
+      <li><%= link_to current_admin.l_name, "#" %></li>
+      <li><%= link_to "ログアウト", destroy_admin_session_path, method: :delete %></li>
+    <% else %>
+      <li><%= link_to "料理人の新規登録", new_admin_registration_path %></li>
+      <li><%= link_to "料理人のログイン", new_admin_session_path %></li>
+    <% end %>
       <li><a href="">お問い合わせ</a></li>
     </ul>
   </nav>
