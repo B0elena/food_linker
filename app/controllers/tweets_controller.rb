@@ -21,6 +21,15 @@ class TweetsController < ApplicationController
     @tweet = Tweet.find(params[:id])
   end
 
+  def destroy
+    tweet = Tweet.find(params[:id])
+    if tweet.destroy
+      redirect_to root_path
+    else
+      render :show
+    end
+  end
+
   private
   def move_to_index
     unless (user_signed_in? || admin_signed_in?)
