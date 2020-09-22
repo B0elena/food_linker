@@ -105,6 +105,8 @@ Things you may want to cover:
 ### worksテーブル
 | Column   | Type   | Options     |
 | -------- | ------ | ----------- |
+| shop_name | string | null: false |
+| employment_status_id | integer | null: false |
 | work_name | string | null: false |
 | work_text | string | null: false |
 | phone | string | null: false |
