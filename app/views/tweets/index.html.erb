@@ -34,11 +34,13 @@
     <ul class='tweet-lists'>
       <% @tweets.each do |tweet| %>
         <li class='list'>
+        <%= link_to tweet_path(tweet.id) do %>
           <div class='tweet-img-content'>
             <%= image_tag tweet.image, class: "tweet-img" %>
           </div>
           <h2 class=''>
           </h2>
+        <% end %>
         </li>
       <% end %>
     </ul>
