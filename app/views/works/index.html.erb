@@ -1,5 +1,37 @@
 <%= render "shared/headers" %>
-
-
+<main>
+  <div>
+    <ul class='work-lists'>
+      <% @works.each do |work| %>
+      <div class="work-list">
+        <div class="work-info">
+          <li>店名：
+            <%= work.shop_name %>
+          </li>
+          <li>雇用形態：
+            <%= work.employment_status.name %>
+          </li>
+          <li>業種：
+            <%= work.work_name %>
+          </li>
+        </div>
+        <div class="work-description">
+          <li>仕事内容：
+            <%= work.work_text %>
+          </li>
+        </div>
+        <div class="work-contact">
+          <li>連絡先：
+            <%= work.phone %>
+          </li>
+          <li>担当者：
+            <%= work.admin.l_name %><%= work.admin.f_name %>
+          </li>
+        </div>
+      </div>
+      <% end %>
+    </ul>
+  </div>
+</main>
 
 <%= render "shared/footers" %>

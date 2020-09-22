@@ -1,0 +1,35 @@
+.work-list {
+  background: whitesmoke;
+  padding: 20px;
+  margin: 20px 40px;
+  border-radius: 10px;
+  transition: background,box-shadow .7s;
+}
+
+.work-list:hover {
+  background: rgb(228, 227, 227);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
+}
+
+.work-info {
+  display: flex;
+}
+
+.work-info > li {
+  margin: 10px;
+  border-bottom: 1px solid;
+}
+
+.work-description {
+  margin: 20px 0;
+  display: flex;
+}
+
+.work-contact {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.work-contact > li {
+  margin: 10px;
+}

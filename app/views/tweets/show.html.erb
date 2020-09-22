@@ -1,7 +1,7 @@
 <%= render "shared/headers" %>
 
-<%# 投稿の概要 %>
 <main>
+  <%# 投稿の概要 %>
   <section class="tweet-show">
     <div class="tweet-show-contents">
       <%= image_tag @tweet.image, class:"tweet-box-img" %>
@@ -29,6 +29,7 @@
       </div>
     </div>
   </section>
+  <%# 投稿の概要 %>
 
   <%# コメント部分 %>
   <section>
@@ -42,6 +43,5 @@
   </section>
   <%# コメント部分 %>
 </main>
-<%# 投稿の概要 %>
 
 <%= render "shared/footers" %>
