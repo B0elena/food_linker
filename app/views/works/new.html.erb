@@ -1,0 +1,14 @@
+<%= render "shared/headers" %>
+
+<main>
+  <%= form_with model: @work, local: true do |f| %>
+    <%= f.text_field :shop_name, placeholder:"店名" %>
+    
+    <%= f.text_field :work_name, placeholder:"職種（例：店長）" %>
+    <%= f.text_field :work_text, placeholder:"仕事内容" %>
+    <%= f.text_field :phone, placeholder:"電話番号" %>
+    <%= f.submit "投稿する" %>
+  <% end %>
+</main>
+
+<%= render "shared/footers" %>
