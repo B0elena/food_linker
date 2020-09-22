@@ -23,6 +23,9 @@
         <div class="work-contact">
           <% if admin_signed_in? && current_admin.id == work.admin_id%>
             <li>
+              <%= link_to "編集", edit_work_path(work.id), method: :get, class: "work-delete" %>
+            </li>
+            <li>
               <%= link_to "削除", work_path(work.id), method: :delete, class: "work-delete" %>
             </li>
           <% else %>

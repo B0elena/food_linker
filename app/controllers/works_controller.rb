@@ -1,6 +1,6 @@
 class WorksController < ApplicationController
   def index
-    @works = Work.all
+    @works = Work.all.order('created_at DESC')
   end
 
   def new
@@ -13,6 +13,28 @@ class WorksController < ApplicationController
       redirect_to root_path
     else
       render :new
+    end
+  end
+
+  def destroy
+    work = Work.find(params[:id])
+    if work.destroy
+      redirect_to works_path
+    else
+      render :index
+    end
+  end
+
+  def edit
+    @work = Work.find(params[:id])
+  end
+
+  def update
+    @work = Work.find(params[:id])
+    if @work.update(work_params)
+      redirect_to works_path
+    else
+      render :edit
     end
   end
 
