@@ -30,7 +30,7 @@
         <div class="tweet-option">
         <% if admin_signed_in? && current_admin.id == @tweet.admin_id %>
           <div>編集</div>
-          <div>削除</div>
+          <div><%= link_to '削除', tweet_path(@tweet.id), method: :delete, class: "tweet-delete" %></div>
         <% else %>
           <div>いいね</div>
           <div></div>
