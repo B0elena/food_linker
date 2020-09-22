@@ -1,0 +1,71 @@
+<%# ヘッダー部分 %>
+<div class="header-content">
+  <div class="header-left">
+  </div>
+  <div class="header-center">
+    <h1>
+      <div class="food-linker">
+        <%= link_to "FOOD LINKER", "/", class: "food-linker-logo" %>
+      </div>
+    </h1>
+    <p class="sub-title">料理人で作り上げるSNS</p>
+  </div>
+  <div class="header-right">
+  </div>
+</div>
+<%# ヘッダー部分 %>
+
+<%# 投稿の概要 %>
+<main>
+  <section class="tweet-show">
+    <div class="tweet-show-contents">
+      <%= image_tag @tweet.image, class:"tweet-box-img" %>
+      <div class="tweet-content">
+        <h1>
+          <%= @tweet.tweet_name %>
+        </h1>
+        <p>
+          <%= @tweet.tweet_text %>
+        </p>
+        <div class="tweet-option">
+        <% if admin_signed_in? && current_admin.id == @tweet.admin_id %>
+          <div>編集</div>
+          <div>削除</div>
+        <% else %>
+          <div>いいね</div>
+          <div></div>
+        <% end %>
+        </div>
+        <div class="tweet-admin">
+          <div class="tweet-admin-name">投稿者：　
+            <%=  @tweet.admin.l_name %><%=  @tweet.admin.f_name %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <%# コメント部分 %>
+  <section>
+    <div>
+      <h1>コメント</h1>
+      <div>コメントテキスト</div>
+      <div>フォーム部分</div>
+      <div>注意害</div>
+      <div>送信</div>
+    </div>
+  </section>
+  <%# コメント部分 %>
+</main>
+<%# 投稿の概要 %>
+
+<%# フッター部分 %>
+<div class="footer-content">
+  <div class="footer-title">
+    FOOD LINKER
+  </div>
+  <div class="copyright">
+    Copyright(C) 2020  FOOD LINKER  All Rights Researved.
+  </div>
+</div>
+<%# フッター部分 %>
