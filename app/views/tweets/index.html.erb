@@ -25,7 +25,23 @@
 
   <%# 投稿の一覧表示部分 %>
   <section class="tweet-contents">
-    <h1>一覧表示</h1>
+    <div class="tweet-menu">
+      <h1>一覧表示</h1>
+      <div>
+        検索
+      </div>
+    </div>
+    <ul class='tweet-lists'>
+      <% @tweets.each do |tweet| %>
+        <li class='list'>
+          <div class='tweet-img-content'>
+            <%= image_tag tweet.image, class: "tweet-img" %>
+          </div>
+          <h2 class=''>
+          </h2>
+        </li>
+      <% end %>
+    </ul>
   </section>
   <%# 投稿の一覧表示部分 %>
 

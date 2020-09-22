@@ -58,6 +58,53 @@
 }
 // 画面上部のタイトル部分 
 
+// 投稿の一覧表示部分
+.tweet-contents {
+  background-color: #F8F8F8;
+  text-align: center;
+  font-size: 20px;
+}
+
+.tweet-menu {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tweet-menu > h1 {
+  font-size: 25px;
+  padding: 3px;
+  border-bottom: 1px solid;
+  width: 300px;
+}
+
+.tweet-lists {
+  width: 90vw;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tweet-lists > li {
+  width: 259px;
+  height: 259px;
+}
+
+.tweet-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  transition: .7s;
+}
+
+.tweet-img:hover {
+  width: 230px;
+  height: 230px;
+  border-radius: 5px;
+}
+// 投稿の一覧表示部分
+
 // 料理人の紹介部分
 .chef-contents {
   background-color: #F8F8F8;
@@ -65,11 +112,3 @@
   font-size: 20px;
 }
 // 料理人の紹介部分
-
-// 投稿の一覧表示部分
-.tweet-contents {
-  background-color: #F8F8F8;
-  text-align: center;
-  font-size: 20px;
-}
-// 投稿の一覧表示部分
