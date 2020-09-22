@@ -21,14 +21,21 @@
           </li>
         </div>
         <div class="work-contact">
-          <li>連絡先：
-            <%= work.phone %>
-          </li>
-          <li>担当者：
-            <%= work.admin.l_name %><%= work.admin.f_name %>
-          </li>
+          <% if admin_signed_in? && current_admin.id == work.admin_id%>
+            <li>
+              <%= link_to "削除", work_path(work.id), method: :delete, class: "work-delete" %>
+            </li>
+          <% else %>
+            <li>連絡先：
+              <%= work.phone %>
+            </li>
+            <li>担当者：
+              <%= work.admin.l_name %><%= work.admin.f_name %>
+            </li>
+          <% end %>
         </div>
       </div>
+
       <% end %>
     </ul>
   </div>
