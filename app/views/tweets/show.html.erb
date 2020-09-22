@@ -1,19 +1,4 @@
-<%# ヘッダー部分 %>
-<div class="header-content">
-  <div class="header-left">
-  </div>
-  <div class="header-center">
-    <h1>
-      <div class="food-linker">
-        <%= link_to "FOOD LINKER", "/", class: "food-linker-logo" %>
-      </div>
-    </h1>
-    <p class="sub-title">料理人で作り上げるSNS</p>
-  </div>
-  <div class="header-right">
-  </div>
-</div>
-<%# ヘッダー部分 %>
+<%= render "shared/headers" %>
 
 <%# 投稿の概要 %>
 <main>
@@ -59,13 +44,4 @@
 </main>
 <%# 投稿の概要 %>
 
-<%# フッター部分 %>
-<div class="footer-content">
-  <div class="footer-title">
-    FOOD LINKER
-  </div>
-  <div class="copyright">
-    Copyright(C) 2020  FOOD LINKER  All Rights Researved.
-  </div>
-</div>
-<%# フッター部分 %>
+<%= render "shared/footers" %>
