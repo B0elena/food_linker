@@ -1,0 +1,36 @@
+<%# ヘッダー部分 %>
+<div class="header-content">
+  <div class="header-left">
+  </div>
+  <div class="header-center">
+    <h1>
+      <div class="food-linker">
+        <%= link_to "FOOD LINKER", "/", class: "food-linker-logo" %>
+      </div>
+    </h1>
+    <p class="sub-title">料理人で作り上げるSNS</p>
+  </div>
+  <div class="header-right">
+  </div>
+</div>
+<%# ヘッダー部分 %>
+
+<main>
+  <%= form_with model: @tweet, local: true do |f| %>
+    <%= f.file_field :image %>
+    <%= f.text_field :tweet_name, placeholder:"タイトル" %>
+    <%= f.text_field :tweet_text, placeholder:"説明" %>
+    <%= f.submit "投稿する" %>
+  <% end %>
+</main>
+
+<%# フッター部分 %>
+<div class="footer-content">
+  <div class="footer-title">
+    FOOD LINKER
+  </div>
+  <div class="copyright">
+    Copyright(C) 2020  FOOD LINKER  All Rights Researved.
+  </div>
+</div>
+<%# フッター部分 %>
