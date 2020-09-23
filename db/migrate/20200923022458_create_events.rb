@@ -6,7 +6,7 @@ class CreateEvents < ActiveRecord::Migration[6.0]
       t.string :prefecture, null: false
       t.string :city,       null: false
       t.string :block,      null: false
-      t.string :building,   null: false
+      t.string :building
       t.string :phone,      null: false
       t.datetime :date,     null: false
       t.references :admin,  null: false, foreign_key: true

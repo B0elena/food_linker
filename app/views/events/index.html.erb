@@ -1,0 +1,57 @@
+<%= render "shared/headers" %>
+<main>
+  <div>
+    <ul class='event-lists'>
+      <% @events.each do |event| %>
+      <div class="event-list">
+        <div class="event-info">
+          <li>イベント名：
+            <%= event.event_name %>
+          </li>
+        </div>
+        <div class="event-text">
+          <li>イベント内容：
+            <%= event.event_text %>
+          </li>
+        </div>
+        <div class="event-place">
+          <li>イベント会場：
+            <%= event.prefecture %>
+          </li>
+          <li>
+            <%= event.city %>
+          </li>
+          <li>
+            <%= event.block %>
+          </li>
+          <li>
+            <%= event.building %>
+          </li>
+        </div>
+        <div class="event-time">
+          <%= event.date.strftime('%Y年%m月%d日 %H時%M分') %>開場
+        </div>
+        <div class="event-contact">
+          <% if admin_signed_in? && current_admin.id == event.admin_id%>
+            <li>
+              <%= link_to "編集", edit_event_path(event.id), method: :get, class: "event-delete" %>
+            </li>
+            <li>
+              <%= link_to "削除", event_path(event.id), method: :delete, class: "event-delete" %>
+            </li>
+          <% else %>
+            <li>お問い合わせ：
+              <%= event.phone %>
+            </li>
+            <li>担当者：
+              <%= event.admin.l_name %><%= event.admin.f_name %>
+            </li>
+          <% end %>
+        </div>
+      </div>
+
+      <% end %>
+    </ul>
+  </div>
+</main>
+<%= render "shared/footers" %>

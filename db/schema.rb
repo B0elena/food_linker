@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(version: 2020_09_23_022458) do
     t.string "prefecture", null: false
     t.string "city", null: false
     t.string "block", null: false
-    t.string "building", null: false
+    t.string "building"
     t.string "phone", null: false
     t.datetime "date", null: false
     t.bigint "admin_id", null: false
