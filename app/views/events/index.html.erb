@@ -29,7 +29,9 @@
           </li>
         </div>
         <div class="event-time">
-          <%= event.date.strftime('%Y年%m月%d日 %H時%M分') %>開場
+          <li>イベント日時：
+            <%= event.date.strftime('%Y年%m月%d日 %H時%M分') %>
+          </li>
         </div>
         <div class="event-contact">
           <% if admin_signed_in? && current_admin.id == event.admin_id%>

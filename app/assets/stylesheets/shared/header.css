@@ -27,6 +27,13 @@
   text-align: center;
   font-size: 34px;
   color: rgb(68, 67, 67);
+  border-radius: 5px;
+  transition: background,box-shadow .7s;
+}
+
+.food-linker:hover {
+  background: #F8F8F8;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
 }
 
 .food-linker-logo {
