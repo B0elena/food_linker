@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   root to: "tweets#index"
   resources :tweets
   resources :works, only:[:index, :new, :create, :destroy, :edit, :update]
+  resources :events, only:[:index, :new, :create, :destroy, :edit, :update]
 end

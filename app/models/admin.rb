@@ -5,5 +5,6 @@ class Admin < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :items
   has_many :works
+  has_many :events
   validates :l_name, :f_name, presence: true
 end

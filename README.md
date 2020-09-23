@@ -98,6 +98,8 @@ Things you may want to cover:
 | city | string | null: false |
 | block | string | null: false |
 | building | string | |
+| date | datetime | null: false |
+| phone | string | null: false |
 | admin_id | references | null: false, foreign_key: true |
 ### Association
 - belongs_to :admin

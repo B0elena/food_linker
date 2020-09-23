@@ -21,7 +21,7 @@
           </li>
         </div>
         <div class="work-contact">
-          <% if admin_signed_in? && current_admin.id == work.admin_id%>
+          <% if admin_signed_in? && current_admin.id == work.admin_id %>
             <li>
               <%= link_to "編集", edit_work_path(work.id), method: :get, class: "work-delete" %>
             </li>
@@ -43,5 +43,4 @@
     </ul>
   </div>
 </main>
-
 <%= render "shared/footers" %>

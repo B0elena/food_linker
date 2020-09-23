@@ -1,0 +1,17 @@
+<%= render "shared/headers" %>
+
+<main>
+  <%= form_with model: @event, local: true do |f| %>
+    <%= f.text_field :event_name, placeholder:"イベント名" %>
+    <%= f.text_field :event_text, placeholder:"イベント内容" %>
+    <%= f.text_field :prefecture, placeholder:"東京都" %>
+    <%= f.text_field :city, placeholder:"港区" %>
+    <%= f.text_field :block, placeholder:"青山1-1-1" %>
+    <%= f.text_field :building, placeholder:"青山ビル" %>
+    <%= f.datetime_select :date, :default => {:year => '2020', :month => '01', :day => '01', :hour => '10', :minute => '00'} %>
+    <%= f.text_field :phone, placeholder:"お問い合わせ" %>
+    <%= f.submit "投稿する" %>
+  <% end %>
+</main>
+
+<%= render "shared/footers" %>

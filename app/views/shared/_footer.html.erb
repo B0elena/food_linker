@@ -6,6 +6,7 @@
       <li><%= link_to "ログアウト", destroy_admin_session_path, method: :delete %></li>
       <li><%= link_to "料理の投稿", new_tweet_path %></li>
       <li><%= link_to "求人情報登録", new_work_path %></li>
+      <li><%= link_to "イベント情報登録", new_event_path %></li>
     <% else %>
       <li><%= link_to "料理人の新規登録", new_admin_registration_path %></li>
       <li><%= link_to "料理人のログイン", new_admin_session_path %></li>
