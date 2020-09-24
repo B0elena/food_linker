@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   end
   resources :works, only:[:index, :new, :create, :destroy, :edit, :update]
   resources :events, only:[:index, :new, :create, :destroy, :edit, :update]
+  resources :inquiries, only:[:new, :create]
 end
