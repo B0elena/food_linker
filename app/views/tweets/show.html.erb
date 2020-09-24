@@ -36,9 +36,10 @@
     <div>
       <h1>コメント</h1>
       <div>コメントテキスト</div>
-      <div>フォーム部分</div>
-      <div>注意害</div>
-      <div>送信</div>
+      <%= form_with(model: [@tweet, @comment],local: true) do |f| %>
+        <%= f.text_area :comment_text, placeholder: "コメントする" %>
+        <%= f.submit "送信" %>
+      <% end %>
     </div>
   </section>
   <%# コメント部分 %>
