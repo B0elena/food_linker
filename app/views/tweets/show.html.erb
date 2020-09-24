@@ -33,13 +33,26 @@
 
   <%# コメント部分 %>
   <section>
-    <div>
-      <h1>コメント</h1>
-      <div>コメントテキスト</div>
-      <%= form_with(model: [@tweet, @comment],local: true) do |f| %>
-        <%= f.text_area :comment_text, placeholder: "コメントする" %>
-        <%= f.submit "送信" %>
-      <% end %>
+    <div class="tweet-comment">
+      <h1>コメント一覧</h1>
+      <ul class="tweet-comments">
+        <% @comments.each do |comment| %>
+          <div class="tweet-comment-text">
+            <li class="comment-user">
+              <%= comment.user.nickname %>
+            </li>
+            <li class="comment-text">:
+              <%= comment.comment_text %>
+            </li>
+          </div>
+        <% end %>
+      </ul>
+      <div class="comment-send">
+        <%= form_with(model: [@tweet, @comment],local: true) do |f| %>
+          <%= f.text_area :comment_text, placeholder: "コメントする", class: "comment-text_area" %>
+          <%= f.submit "送信", class: "comment-send-btn" %>
+        <% end %>
+      </div>
     </div>
   </section>
   <%# コメント部分 %>
