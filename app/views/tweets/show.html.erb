@@ -33,12 +33,32 @@
 
   <%# コメント部分 %>
   <section>
-    <div>
-      <h1>コメント</h1>
-      <div>コメントテキスト</div>
-      <div>フォーム部分</div>
-      <div>注意害</div>
-      <div>送信</div>
+    <div class="tweet-comment">
+      <h1>コメント一覧</h1>
+      <ul class="tweet-comments">
+        <% @comments.each do |comment| %>
+          <div class="tweet-comment-text">
+            <li class="comment-user">
+              <%= comment.user.nickname %>
+            </li>
+            <li class="comment-text">:
+              <%= comment.comment_text %>
+            </li>
+          </div>
+        <% end %>
+      </ul>
+      <div class="comment-send">
+      <% if user_signed_in? %>
+        <%= form_with(model: [@tweet, @comment],local: true) do |f| %>
+          <%= f.text_area :comment_text, placeholder: "コメントする", class: "comment-text_area" %>
+          <%= f.submit "送信", class: "comment-send-btn" %>
+        <% end %>
+      <% else %>
+        <strong>
+          <p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p>
+        </strong>
+      <% end %>
+      </div>
     </div>
   </section>
   <%# コメント部分 %>
