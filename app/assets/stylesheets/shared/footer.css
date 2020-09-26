@@ -9,6 +9,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  list-style: none;
 }
 
 .footer-menu > ul > li {

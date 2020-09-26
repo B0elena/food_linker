@@ -48,6 +48,7 @@
 
 .header-right > ul {
   display: flex;
+  list-style: none;
 }
 
 .header-right > ul > li {
@@ -76,6 +77,10 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+.menu-list > ul {
+  list-style: none;
 }
 
 .menu-list > li {
