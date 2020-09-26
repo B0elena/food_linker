@@ -1,7 +1,4 @@
-// Place all the styles related to the inquiries controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-.inquiry-content {
+.work-content {
   width: 60vw;
   padding: 20px;
   border: 2px solid #000;
@@ -9,7 +6,7 @@
   border-radius: 30px;
 }
 
-.inquiry-content > h1 {
+.work-content > h1 {
   text-align: center;
   width: 200px;
   padding: 5px;
@@ -19,25 +16,29 @@
   background: whitesmoke;
 }
 
-.i-field {
+.w-field {
   text-align: center;
   padding: 10px 50px;
 }
 
-.i-actions {
+.w-actions {
   text-align: center;
   margin: auto;
 }
 
-.i-name {
+.w-name {
   width: 200px;
 }
 
-.i-address {
+.w-select {
   width: 200px;
 }
 
-.i-text {
+.w-select {
+  width: 200px;
+}
+
+.w-text {
   width: 300px;
   height: 200px;
 }

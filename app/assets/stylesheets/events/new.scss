@@ -1,0 +1,36 @@
+.event-content {
+  width: 60vw;
+  padding: 20px;
+  border: 2px solid #000;
+  margin: auto;
+  border-radius: 30px;
+}
+
+.event-content > h1 {
+  text-align: center;
+  width: 200px;
+  padding: 5px;
+  margin: auto;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background: whitesmoke;
+}
+
+.e-field {
+  text-align: center;
+  padding: 10px 50px;
+}
+
+.e-actions {
+  text-align: center;
+  margin: auto;
+}
+
+.e-name {
+  width: 300px;
+}
+
+.e-text {
+  width: 400px;
+  height: 150px;
+}

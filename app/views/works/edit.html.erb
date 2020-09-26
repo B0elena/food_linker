@@ -1,13 +1,36 @@
 <%= render "shared/headers" %>
 
-<main>
+<main class="work-content">
+  <h1>求人情報修正</h1>
+
   <%= form_with model: @work, local: true do |f| %>
-    <%= f.text_field :shop_name, placeholder:"店名" %>
-    <%= f.collection_select(:employment_status_id, EmploymentStatus.all, :id, :name, {}, {class:"a"}) %>
-    <%= f.text_field :work_name, placeholder:"職種（例：店長）" %>
-    <%= f.text_area :work_text, placeholder:"仕事内容" %>
-    <%= f.text_field :phone, placeholder:"電話番号" %>
-    <%= f.submit "投稿する" %>
+    <div class="w-field">
+      <%= f.label :店名 %><br />
+      <%= f.text_field :shop_name, class:"w-name" %>
+    </div>
+
+    <div class="w-field">
+      <%= f.collection_select(:employment_status_id, EmploymentStatus.all, :id, :name, {}, {class:"w-select"}) %>
+    </div>
+
+    <div class="w-field">
+      <%= f.label :職種 %><br />
+      <%= f.text_field :work_name, placeholder:"例：店長", class:"w-name" %>
+    </div>
+
+    <div class="w-field">
+      <%= f.label :仕事の詳細 %><br />
+      <%= f.text_area :work_text, placeholder:"仕事内容", class:"w-text" %>
+    </div>
+
+    <div class="w-field">
+      <%= f.label :連絡先 %><br />
+      <%= f.text_field :phone, placeholder:"09012345678" %>
+    </div>
+
+    <div class="w-actions">
+      <%= f.submit "投稿する" %>
+    </div>
   <% end %>
 </main>
 
