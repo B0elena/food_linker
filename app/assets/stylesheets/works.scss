@@ -20,10 +20,6 @@
   display: flex;
 }
 
-.work-info > ul {
-  list-style: none;
-}
-
 .work-info > li {
   margin: 10px;
   border-bottom: 1px solid;
@@ -37,10 +33,6 @@
 .work-contact {
   display: flex;
   justify-content: flex-end;
-}
-
-.work-contact > ul {
-  list-style: none;
 }
 
 .work-contact > li {
