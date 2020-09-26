@@ -1,11 +1,27 @@
 <%= render "shared/headers" %>
 
-<main>
+<main class="tweet-new-content">
+  <h1>料理投稿</h1>
+
   <%= form_with model: @tweet, local: true do |f| %>
-    <%= f.file_field :image %>
-    <%= f.text_field :tweet_name, placeholder:"タイトル" %>
-    <%= f.text_field :tweet_text, placeholder:"説明" %>
-    <%= f.submit "投稿する" %>
+    <div class="t-field">
+      <%= f.label :写真の選択 %><br />
+      <%= f.file_field :image %>
+    </div>
+    
+    <div class="t-field">
+      <%= f.label :料理名 %><br />
+      <%= f.text_field :tweet_name, class: "t-name" %>
+    </div>
+
+    <div class="t-field">
+      <%= f.label :料理詳細 %><br />
+      <%= f.text_area :tweet_text, class: "t-text" %>
+    </div>
+
+    <div class="t-field">
+      <%= f.submit "投稿する" %>
+    </div>
   <% end %>
 </main>
 

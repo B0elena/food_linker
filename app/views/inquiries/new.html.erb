@@ -1,10 +1,25 @@
 <%= render "shared/headers" %>
-<main>
+<main class="inquiry-content">
+  <h1>お問い合わせ内容入力</h1>
   <%= form_with model: @inquiry, local: true do |f| %>
-    <%= f.text_field :name, placeholder:"名前" %>
-    <%= f.text_field :mail, placeholder:"メールアドレス" %>
-    <%= f.text_field :message, placeholder:"メッセージ" %>
-    <%= f.submit "投稿する" %>
+    <div class="i-field">
+      <%= f.label :お名前 %><br />
+      <%= f.text_field :name, placeholder:"山田太郎", class:"i-name" %>
+    </div>
+
+    <div class="i-field">
+      <%= f.label :メールアドレス %><br />
+      <%= f.text_field :mail, placeholder:"sample@gmail.com", class:"i-address" %>
+    </div>
+
+    <div class="i-field">
+      <%= f.label :お問い合わせ内容 %><br />
+      <%= f.text_area :message, placeholder:"メッセージ", class:"i-text" %>
+    </div>
+
+    <div class="i-field">
+      <%= f.submit "投稿する" %>
+    </div>
   <% end %>
 </main>
 

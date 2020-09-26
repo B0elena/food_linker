@@ -1,16 +1,50 @@
 <%= render "shared/headers" %>
 
-<main>
+<main class="event-content">
+  <h1>イベント詳細入力</h1>
+
   <%= form_with model: @event, local: true do |f| %>
-    <%= f.text_field :event_name, placeholder:"イベント名" %>
-    <%= f.text_field :event_text, placeholder:"イベント内容" %>
-    <%= f.text_field :prefecture, placeholder:"東京都" %>
-    <%= f.text_field :city, placeholder:"港区" %>
-    <%= f.text_field :block, placeholder:"青山1-1-1" %>
-    <%= f.text_field :building, placeholder:"青山ビル" %>
-    <%= f.datetime_select :date, :default => {:year => '2020', :month => '01', :day => '01', :hour => '10', :minute => '00'} %>
-    <%= f.text_field :phone, placeholder:"お問い合わせ" %>
-    <%= f.submit "投稿する" %>
+    <div class="e-field">
+      <%= f.label :イベント名 %><br />
+      <%= f.text_field :event_name, class: "e-name" %>
+    </div>
+
+    <div class="e-field">
+      <%= f.label :イベント内容 %><br />
+      <%= f.text_area :event_text, class: "e-text "%>
+    </div>
+
+    <div class="e-field">
+      <%= f.label :イベント会場住所 %><br />
+      <%= f.text_field :prefecture, placeholder:"東京都" %>
+    </div>
+
+    <div class="e-field">
+      <%= f.text_field :city, placeholder:"港区" %>
+    </div>
+
+    <div class="e-field">
+      <%= f.text_field :block, placeholder:"青山1-1-1" %>
+    </div>
+
+    <div class="e-field">
+      <%= f.text_field :building, placeholder:"青山ビル(任意)" %>
+    </div>
+
+    <div class="e-field">
+      <%= f.label :イベント日時 %><br />
+      <%= f.datetime_select :date, :default => {:year => '2020', :month => '01', :day => '01', :hour => '10', :minute => '00'} %>
+    </div>
+
+    <div class="e-field">
+      <%= f.label :お問い合わせ番号 %><br />
+      <%= f.text_field :phone, placeholder:"09012345678" %>
+    </div>
+
+    <div class="e-actions">
+      <%= f.submit "投稿する" %>
+    </div>
+    
   <% end %>
 </main>
 
