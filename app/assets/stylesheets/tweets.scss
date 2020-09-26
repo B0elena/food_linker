@@ -84,14 +84,17 @@
 }
 
 .tweet-lists {
-  width: 90vw;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-.tweet-lists > li {
-  width: 259px;
+ .tweet-lists > li {
+  margin: 8px;
+ }
+
+.tweet-img-content {
   height: 259px;
 }
 
@@ -103,8 +106,8 @@
 }
 
 .tweet-img:hover {
-  width: 230px;
-  height: 230px;
+  width: 200px;
+  height: 200px;
   border-radius: 5px;
 }
 // 投稿の一覧表示部分
@@ -229,3 +232,13 @@
   height: 150px;
 }
 // 投稿と編集
+
+ /* タブレット表示時 */
+@media (max-width: 1024px) {
+
+}
+
+ /* スマホ表示時 */
+ @media (max-width: 599px) {
+
+}
