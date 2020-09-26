@@ -1,3 +1,55 @@
 // Place all the styles related to the comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// コメント欄
+.tweet-comment {
+  background: rgb(228, 227, 227);
+  }
+  
+  .tweet-comment > h1 {
+    padding: 30px 20px 0 20px;
+    font-size: 25px;
+    width: 30vw;
+    border-bottom: 1px solid;
+    text-align: center;
+    margin: auto;
+  }
+  
+  .tweet-comment-text {
+    display: flex;
+    justify-content: center;
+    margin: 20px 40px;
+    background: whitesmoke;
+    border-radius: 5px;
+  }
+  
+  .comment-user {
+    padding: 5px 20px;
+    margin: 10px 0;
+    width: 150px;
+  }
+  
+  .comment-text {
+    padding: 5px 20px;
+    margin: 10px 0;
+    width: 60vw;
+  }
+  
+  .comment-send {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .comment-text_area {
+    display: block;
+    width: 400px;
+    height: 100px;
+    margin: 40px 0 20px 0;
+  }
+  
+  .comment-send-btn {
+    width: 400px;
+    margin: 10px 0;
+  }
+  // コメント欄
