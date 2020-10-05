@@ -4,7 +4,7 @@
 
 // 画面上部のタイトル部分 
 .description-contents {
-  height: 150vh;
+  // height: 180vh;
 }
 
 .description-contents > h1 {
@@ -20,7 +20,6 @@
 
 .description-image {
   width: 100vw;
-  height: 70vh;
   background-image: image-url("image5.jpg");
   background-size: cover;
   color: white;

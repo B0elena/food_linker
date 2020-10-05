@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :event do
-    event_name {"ああああ"}
-    event_text {"ああああ"}
+    event_name { Faker::Lorem.sentence }
+    event_text { Faker::Lorem.sentence }
     prefecture {"東京都"}
     city       {"港区"}
     block      {"青山1-1-1"}
