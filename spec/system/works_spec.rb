@@ -52,8 +52,8 @@ RSpec.describe '求人情報の編集', type: :system do
     @work1 = FactoryBot.create(:work)
     @work2 = FactoryBot.create(:work)
   end
-  context 'ツイート編集ができるとき' do
-    it 'ログインした料理人は自分が投稿した料理の編集ができる' do
+  context '求人編集ができるとき' do
+    it 'ログインした料理人は自分が投稿した求人情報の編集ができる' do
       # work1を投稿した料理人でログインする
       visit new_admin_session_path
       fill_in 'admin_email', with: @work1.admin.email
@@ -96,7 +96,7 @@ RSpec.describe '求人情報の編集', type: :system do
     end
   end
   context '求人情報の編集ができないとき' do
-    it 'ログインした料理人は自分以外が投稿したツイートの編集画面には遷移できない' do
+    it 'ログインした料理人は自分以外が投稿した求人情報の編集画面には遷移できない' do
       # work1を投稿したユーザーでログインする
       visit new_admin_session_path
       fill_in 'admin_email', with: @work1.admin.email
