@@ -1,5 +1,5 @@
 class TweetsController < ApplicationController
-  before_action :move_to_index, except: [:index, :show]
+  before_action :move_to_index, except: [:index, :show, :search]
   def index
     @tweets = Tweet.all.order('created_at DESC')
   end
@@ -45,6 +45,9 @@ class TweetsController < ApplicationController
     end
   end
 
+  def search
+    @tweets = Tweet.search(params[:keyword])
+  end
 
   private
   def move_to_index

@@ -4,7 +4,15 @@ class Tweet < ApplicationRecord
   has_one_attached :image
   validates :tweet_name, :tweet_text, :image, presence: true
 
-  def was_attached?
-    self.image.attached?
+  def self.search(search)
+    if search != ""
+      Tweet.where('tweet_name LIKE(?)', "%#{search}%")
+    else
+      Tweet.all
+    end
   end
+
+  # def was_attached?
+  #   self.image.attached?
+  # end
 end
