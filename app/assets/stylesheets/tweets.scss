@@ -232,6 +232,22 @@
 }
 // 投稿と編集
 
+// 検索
+.search-input{
+  width: 300px;
+
+}
+
+.search-btn {
+  margin-right: 30px;
+}
+
+.no-search {
+  font-size: 20px;
+  text-align: center;
+}
+// 検索
+
  /* タブレット表示時 */
 @media (max-width: 1024px) {
 

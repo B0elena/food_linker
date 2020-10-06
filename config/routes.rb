@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   root to: "tweets#index"
   resources :tweets do
     resources :comments, only: :create
+    collection do
+      get 'search'
+    end
   end
   resources :works, only:[:index, :new, :create, :destroy, :edit, :update]
   resources :events, only:[:index, :new, :create, :destroy, :edit, :update]
