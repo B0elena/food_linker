@@ -1,31 +1,9 @@
 # README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
 ## アプリケーション名
 FOOD LINKER
 料理人で作り上げるSNS
+
+<img width="941" alt="food-linker-top" src="https://user-images.githubusercontent.com/69143298/95153412-56718300-07ca-11eb-9c62-d07e3a919f27.png">
 
 ## アプリケーション概要
 「料理人で作り上げるSNS」をテーマにしたアプリケーションを作りました。ログイン機能をdeviseで実装したのですが、料理人視点と一般のユーザー視点の２つの視点から使えるようにしました。料理人でログインすると料理の投稿、求人投稿、イベント投稿ができます。一般ユーザーでログインすると料理に対してのコメントのみできる仕様になっています。
@@ -47,10 +25,12 @@ HTML / CSS / SCSS / JavaScript / ruby 2.6.5 / rails 6.0.0 / MySQL2 / AWS S3 / Gi
 - workの投稿　一覧　詳細　編集　削除の機能(求人の投稿)
 - tweetに対するコメント機能(料理投稿に対してのコメント)
 - お問い合わせ機能(管理者に対してのメッセージ送信機能)
+- tweetの検索機能
+- Rspecによる単体テストコード
+- capybaraによる結合テストコード
 
 ## 実装予定の機能
 - 料理人同士でコミュニケーションが取れるようにチャットルームを予定
-- 検索機能を予定
 - 料理人の詳細ページを予定
 
 ## データベース設計
@@ -156,5 +136,28 @@ HTML / CSS / SCSS / JavaScript / ruby 2.6.5 / rails 6.0.0 / MySQL2 / AWS S3 / Gi
 - has_one_attached :image
 
 ## ER図
-https://app.diagrams.net/#G1U7wnE44zb40v6hDMuWt9Hv3EeQ80Ou-z
+<img width="664" alt="food-liker-er" src="https://user-images.githubusercontent.com/69143298/95153834-5c1b9880-07cb-11eb-90e4-c3fa81ff9f48.png">
 
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
