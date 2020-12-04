@@ -1,4 +1,4 @@
-# README
+# FOOD LINKER
 ## アプリケーション名
 FOOD LINKER
 料理人で作り上げるSNS
