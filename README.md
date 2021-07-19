@@ -29,9 +29,6 @@ HTML / CSS / SCSS / JavaScript / ruby 2.6.5 / rails 6.0.0 / MySQL2 / AWS S3 / Gi
 - Rspecによる単体テストコード
 - capybaraによる結合テストコード
 
-## 実装予定の機能
-- 料理人同士でコミュニケーションが取れるようにチャットルームを予定
-- 料理人の詳細ページを予定
 
 ## データベース設計
 ### adminsテーブル
